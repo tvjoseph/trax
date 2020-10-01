@@ -62,3 +62,10 @@ except ImportError:
     max = amax  # pylint: disable=redefined-builtin,undefined-variable
     min = amin  # pylint: disable=redefined-builtin,undefined-variable
     round = around  # pylint: disable=redefined-builtin,undefined-variable
+
+try:
+  from tensorflow.python.framework import ops
+  ops.enable_numpy_style_type_promotion()
+
+except ImportError:
+  pass
